@@ -1,0 +1,9 @@
+- Um sistema sempre tem um gargalo (restrição) inicial
+- Melhorar outras partes do sistema, não melhora o sistema, se não tratarmos o gargalo
+- Focar no gargalo para melhorar a eficiência
+
+- Todos sistemas têm unidades de trabalho, com entradas e saídas
+
+Referência: 
+- Masterclass Fundamentos Atemporais para Arquitetos de Software (Elemar Junior)
+- Livro "A Meta" - Eliyahu Golfratt

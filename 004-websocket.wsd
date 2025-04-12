@@ -1,0 +1,45 @@
+@startuml
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+!include <C4/C4_Component>
+
+' ---- Context Diagram (C4 Level 1) ----
+LAYOUT_TOP_DOWN()
+Person(user, "Usuário", "Recebe notificações em tempo real.")
+System(webapp, "Aplicação Web", "Interface para interação com notificações.")
+System_Boundary(b_system, "Backend do Sistema") {
+    System(websocket_server, "Servidor WebSocket", "Gerencia conexões WebSocket e envia notificações.")
+    System(database, "Banco de Dados", "Armazena eventos e notificações.")
+}
+
+Rel(user, webapp, "Interage via HTTP e WebSocket")
+Rel(webapp, websocket_server, "Estabelece conexão WebSocket")
+Rel(websocket_server, database, "Consulta e armazena notificações")
+Rel(websocket_server, webapp, "Envia notificações em tempo real")
+
+' ---- Container Diagram (C4 Level 2) ----
+LAYOUT_LEFT_RIGHT()
+Container(frontend, "Frontend", "React/Angular", "Consome notificações em tempo real.")
+Container(backend, "Backend", "Node.js/Python", "Gerencia eventos de notificação.")
+Container(websocket_service, "WebSocket Service", "Servidor WebSocket", "Gerencia conexões WebSocket.")
+Container(message_queue, "Message Queue", "Redis/Kafka", "Filtra e processa notificações.")
+ContainerDb(db, "Banco de Dados", "PostgreSQL", "Armazena eventos de notificação.")
+
+Rel(user, frontend, "Conexão WebSocket para notificações")
+Rel(frontend, websocket_service, "Escuta notificações em tempo real")
+Rel(backend, websocket_service, "Dispara eventos de notificação")
+Rel(backend, db, "Persiste eventos de notificação")
+Rel(backend, message_queue, "Publica mensagens de notificação")
+Rel(message_queue, websocket_service, "Processa eventos e envia para WebSocket")
+
+' ---- Component Diagram (C4 Level 3) ----
+LAYOUT_LEFT_RIGHT()
+Component(ws_handler, "WebSocket Handler", "Gerencia conexões e mensagens WebSocket.")
+Component(notif_manager, "Notification Manager", "Orquestra notificações enviadas.")
+Component(conn_manager, "Connection Manager", "Gerencia conexões ativas dos usuários.")
+
+Rel(ws_handler, conn_manager, "Mantém conexões WebSocket")
+Rel(notif_manager, ws_handler, "Processa e envia notificações")
+Rel(backend, notif_manager, "Dispara eventos de notificação")
+
+@enduml
