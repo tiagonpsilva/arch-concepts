@@ -1,13 +1,66 @@
+@startuml Teoria das Filas em Arquitetura de Software
 
-waiting Time
-service Time
-response time / lead time
-queue length
-flow efficiency
-arrival rate 
-service rate
-rate limit
-little's law
+skinparam backgroundColor white
+skinparam ArrowColor black
+skinparam NoteBackgroundColor #E8E8FF
+skinparam NoteBorderColor gray
 
+title "Teoria das Filas em Arquitetura de Software"
 
-Referência: Masterclass Fundamentos Atemporais para Arquitetos de Software (Elemar Junior)
+' Componentes do sistema
+rectangle "Entrada de Requisições" as entrada #FFFFCC
+queue "Fila de Espera" as fila #D0E0FF
+rectangle "Serviço/Processamento" as servico #CCFFCC
+rectangle "Saída" as saida #FFDDDD
+
+' Conexões
+entrada -> fila : "Taxa de Chegada\n(Arrival Rate λ)"
+fila -> servico : "Taxa de Serviço\n(Service Rate μ)"
+servico -> saida
+
+' Notas explicativas
+note top of fila
+  **Queue Length**
+  Número de requisições na fila
+end note
+
+note bottom of fila
+  **Waiting Time**
+  Tempo que uma requisição
+  permanece na fila
+end note
+
+note top of servico
+  **Service Time**
+  Tempo para processar 
+  uma requisição
+end note
+
+note bottom of entrada
+  **Rate Limit**
+  Limites aplicados para 
+  controlar a taxa de chegada
+end note
+
+note bottom of saida
+  **Response/Lead Time**
+  Tempo total = Waiting Time + Service Time
+end note
+
+' Lei de Little
+note right of servico
+  **Lei de Little (L = λW)**
+  L = Número médio de itens no sistema
+  λ = Taxa média de chegada
+  W = Tempo médio no sistema
+end note
+
+note right of fila
+  **Flow Efficiency**
+  Tempo de Valor Agregado / Lead Time
+  Mede a eficiência do fluxo de trabalho
+end note
+
+footer "Referência: Masterclass Fundamentos Atemporais para Arquitetos de Software (Elemar Junior)"
+
+@enduml

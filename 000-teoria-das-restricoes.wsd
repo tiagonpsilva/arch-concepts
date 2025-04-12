@@ -1,9 +1,71 @@
-- Um sistema sempre tem um gargalo (restrição) inicial
-- Melhorar outras partes do sistema, não melhora o sistema, se não tratarmos o gargalo
-- Focar no gargalo para melhorar a eficiência
+@startuml Teoria das Restrições na Arquitetura de Software
 
-- Todos sistemas têm unidades de trabalho, com entradas e saídas
+skinparam {
+  ArrowColor #444444
+  BackgroundColor #FAFAFA
+  BorderColor #444444
+}
 
-Referência: 
-- Masterclass Fundamentos Atemporais para Arquitetos de Software (Elemar Junior)
-- Livro "A Meta" - Eliyahu Golfratt
+title Teoria das Restrições Aplicada à Arquitetura de Software
+
+' Definição dos componentes do sistema
+rectangle "Usuários\n(Carga: 1000 req/min)" as users #lightgreen
+rectangle "API Gateway\n(Capacidade: 950 req/min)" as api #lightblue
+rectangle "Serviço de Autenticação\n(Capacidade: 900 req/min)" as auth #lightblue
+rectangle "Banco de Dados\n(Capacidade: 400 req/min)" as db #red
+rectangle "Serviço de Cache\n(Capacidade: 2000 req/min)" as cache #lightblue
+
+' Fluxo do sistema
+users -> api
+api -> auth
+auth -> db
+auth ..> cache : "Consulta\nCache"
+
+' Acúmulo antes do gargalo
+queue "Fila de\nrequisições" as dbqueue
+auth -> dbqueue
+dbqueue -> db
+
+' Notas explicativas
+note bottom of db #yellow
+  <b>Gargalo (Restrição)</b>
+  O banco de dados limita a capacidade
+  total do sistema a 400 req/min
+end note
+
+note top
+  <b>Teoria das Restrições em Arquitetura de Software:</b>
+  1. Qualquer arquitetura terá um componente que limita sua capacidade total
+  2. Otimizar componentes não-gargalo (API, serviços) não aumenta a capacidade global
+  3. A estratégia deve focar em identificar e melhorar o gargalo
+  4. Uma restrição tratada dá lugar a uma nova restrição no sistema
+end note
+
+' Estratégias de solução
+note right of db
+  <b>Estratégias para tratar o gargalo:</b>
+  1. Escalar verticalmente o banco de dados
+  2. Implementar sharding ou particionamento
+  3. Aumentar uso de cache para reduzir acessos ao DB
+  4. Otimizar queries e índices
+  5. Considerar mudança para DB mais adequado à carga
+end note
+
+' Efeitos de um sistema não otimizado
+note bottom
+  <b>Impacto do gargalo:</b>
+  
+  • Latência aumenta exponencialmente sob carga
+  • Timeouts frequentes durante picos de uso
+  • Experiência do usuário degradada
+  • Desperdício de recursos em outros componentes
+  • Escalabilidade comprometida
+end note
+
+footer
+  Referências:
+  - Masterclass Fundamentos Atemporais para Arquitetos de Software (Elemar Junior)
+  - Livro "A Meta" - Eliyahu Goldratt
+endfooter
+
+@enduml

@@ -1,2 +1,83 @@
-
 Referência: Masterclass Fundamentos Atemporais para Arquitetos de Software (Elemar Junior)
+
+@startuml Máquina de Estado - Sistema de Pedidos
+
+title Máquina de Estado - Processamento de Pedidos
+
+'Definição do estilo
+skinparam state {
+  BackgroundColor LightBlue
+  BorderColor DarkBlue
+  FontName Arial
+  FontSize 12
+}
+
+skinparam arrow {
+  Color DarkBlue
+  FontSize 11
+}
+
+'Estado inicial
+[*] --> Criado : Cliente confirma pedido
+
+'Estados do pedido
+state Criado {
+  [*] --> ValidandoPagamento : Processar pedido
+}
+
+state "Aguardando Pagamento" as AguardandoPagamento
+state "Pagamento Aprovado" as PagamentoAprovado
+state "Pagamento Recusado" as PagamentoRecusado
+state "Em Separação" as EmSeparacao
+state "Aguardando Entrega" as AguardandoEntrega
+state "Em Trânsito" as EmTransito
+state "Entregue" as Entregue
+state "Cancelado" as Cancelado
+
+'Transições
+Criado --> AguardandoPagamento : Validação completa
+AguardandoPagamento --> PagamentoAprovado : Pagamento confirmado
+AguardandoPagamento --> PagamentoRecusado : Pagamento falhou
+PagamentoRecusado --> AguardandoPagamento : Cliente tenta novamente
+PagamentoRecusado --> Cancelado : Tempo limite excedido
+
+PagamentoAprovado --> EmSeparacao : Início do processamento
+EmSeparacao --> AguardandoEntrega : Produtos separados
+AguardandoEntrega --> EmTransito : Coletado pela transportadora
+EmTransito --> Entregue : Confirmação de entrega
+
+'Cancelamento pode ocorrer em vários estados
+AguardandoPagamento --> Cancelado : Cliente cancela
+PagamentoAprovado --> Cancelado : Cliente cancela / Fraude detectada
+EmSeparacao --> Cancelado : Produto indisponível / Cliente cancela
+
+'Estado final
+Entregue --> [*] : Pedido finalizado
+Cancelado --> [*] : Pedido encerrado
+
+'Notas explicativas
+note right of Criado
+  Pedido foi criado no sistema
+  mas ainda precisa ser validado
+end note
+
+note right of PagamentoAprovado
+  Gatilho para processos de
+  faturamento e logística
+end note
+
+note bottom of Cancelado
+  Estados podem ter ações de entrada/saída
+  Transições ocorrem mediante eventos específicos
+end note
+
+note top of EmTransito
+  As máquinas de estado são fundamentais na
+  arquitetura de software para:
+  * Modelar comportamentos complexos
+  * Garantir transições controladas
+  * Definir estados válidos do sistema
+  * Impedir transições inválidas
+end note
+
+@enduml
