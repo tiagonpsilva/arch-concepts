@@ -18,7 +18,7 @@ DIRNAME=$(dirname "$INPUT_FILE")
 BASE_FILENAME="${FILENAME%.*}"
 
 # Make sure we can display outputs
-exec > /dev/tty 2>&1
+#exec > /dev/tty 2>&1 # Uncomment for interactive output
 
 echo "==== PlantUML PNG Generator ===="
 echo "Input file: $INPUT_FILE"
