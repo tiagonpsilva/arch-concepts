@@ -1,29 +1,64 @@
-# Diagramas Conceituais
+# Conceitos de Arquitetura
 
 ## Objetivo
 
 Este projeto reúne conceitos, técnicas e ferramentas relacionados à arquitetura de solução, arquitetura de software e tecnologia em geral. O propósito é documentar e visualizar padrões arquiteturais, decisões de design e modelos conceituais para facilitar o entendimento e a comunicação entre equipes técnicas.
 
-## Design
+## Estrutura
 
-### Arquitetura
+### Architecture Decision Records (ADRs)
+
+Localização: `/000-architecture-decison-records`
+
+Documentação de decisões arquiteturais importantes:
+
+#### Padrões Arquiteturais e Design
+- [ADR-011](000-architecture-decison-records/adr-011-ddd-hexagonal.md): DDD e Arquitetura Hexagonal
+- [ADR-012](000-architecture-decison-records/adr-012-data-modeling.md): Estratégia de Modelagem de Dados
+- [ADR-013](000-architecture-decison-records/adr-013-openapi-standard.md): Padronização de APIs com OpenAPI
+- [ADR-019](000-architecture-decison-records/adr-019-twelve-factor.md): Adoção do Padrão 12-Factor App
+
+#### Tecnologias e Linguagens
+- [ADR-017](000-architecture-decison-records/adr-017-golang-adoption.md): Adoção de Go para Microsserviços
+- [ADR-018](000-architecture-decison-records/adr-018-python-adoption.md): Adoção de Python para Serviços de Dados e ML
+
+#### Segurança e Autenticação
+- [ADR-014](000-architecture-decison-records/adr-014-sso-implementation.md): Implementação de SSO com OAuth2/OpenID
+
+#### Comunicação e Integração
+- [ADR-016](000-architecture-decison-records/adr-016-messaging-patterns.md): Padrões de Mensageria com RabbitMQ
+- [ADR-020](000-architecture-decison-records/adr-020-websocket.md): WebSocket para Comunicação Real-time
+
+#### Qualidade e Testes
+- [ADR-015](000-architecture-decison-records/adr-015-test-patterns.md): Padrões de Testes
+
+### Design
+
+#### Arquitetura
 - **Padrões Arquiteturais**: Documentação de padrões como MVC, MVVM, Hexagonal, Microserviços, etc.
 - **Estilos Arquiteturais**: Representações de arquiteturas em camadas, orientada a eventos, baseada em componentes, etc.
-- **Decisões Arquiteturais**: Registro de decisões tomadas e seus fundamentos (ADRs - Architecture Decision Records)
+- **Decisões Arquiteturais**: Registro de decisões tomadas e seus fundamentos
 
-### Design de Código
+#### Design de Código
 - **Padrões de Design**: Implementações e exemplos de padrões GoF (Factory, Singleton, Observer, etc.)
 - **Princípios SOLID**: Diagramas explicativos dos princípios de design orientado a objetos
 - **Clean Code**: Ilustrações de boas práticas de codificação
 
 ## Implementação
-- **PlantUML**: Utilizado para criar diagramas através de código
-  - Diagramas de Classe
-  - Diagramas de Sequência
-  - Diagramas de Componentes
-  - Diagramas de Estado
-- **Mermaid**: Alternativa para diagramas via Markdown
-- **Draw.io/diagrams.net**: Diagramas mais complexos e personalizados
+
+### Ferramentas de Diagramação
+
+#### PlantUML
+- Diagramas de Classe
+- Diagramas de Sequência
+- Diagramas de Componentes
+- Diagramas de Estado
+
+#### Mermaid
+- Alternativa para diagramas via Markdown
+
+#### Draw.io/diagrams.net
+- Diagramas mais complexos e personalizados
 
 ## Como Usar
 
@@ -68,5 +103,6 @@ chmod +x generate-plantuml-png.sh
 
 O script automaticamente baixará o PlantUML.jar se necessário e colocará a imagem PNG resultante no mesmo diretório do arquivo de origem.
 
+## Licença
 
-Este projeto está licenciado sob [incluir licença escolhida].
+Este projeto está licenciado sob a licença MIT.
