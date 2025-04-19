@@ -1,4 +1,4 @@
-# 020 - Implementação de WebSocket para Comunicação Real-time
+# 020 - 🔌 ⚡ Comunicação em Tempo Real com WebSocket
 
 Data: 2024-03-21
 

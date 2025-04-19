@@ -1,4 +1,4 @@
-# 006 - Adoção de MongoDB para Dados de Perfil
+# 006 - 🍃 📊 Perfis de Acesso MongoDB
 
 Data: 2024-03-21
 

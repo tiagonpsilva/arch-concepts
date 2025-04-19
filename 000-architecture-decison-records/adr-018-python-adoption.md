@@ -1,12 +1,12 @@
-# 018 - Adoção de Python para Serviços de Dados e ML
+# 018 - Adoção de Python para Serviços de Dados e ML 🐍
 
 Data: 2024-03-21
 
-## Status
+## Status 📊
 
 Aceito
 
-## Contexto
+## Contexto 🔍
 
 Precisamos de uma linguagem que ofereça:
 - Excelente suporte para ML/AI
@@ -18,7 +18,7 @@ Precisamos de uma linguagem que ofereça:
 - Comunidade ativa
 - Bom suporte a async
 
-## Decisão
+## Decisão ✅
 
 Adotar Python como linguagem principal para serviços de dados e ML:
 
@@ -58,9 +58,9 @@ Frameworks e Bibliotecas:
 - Pytest para testes
 - Black para formatação
 
-## Consequências
+## Consequências 📈
 
-### Positivas
+### Positivas ✨
 
 - Desenvolvimento rápido
 - Excelente para dados/ML
@@ -71,7 +71,7 @@ Frameworks e Bibliotecas:
 - Integração com C/C++
 - Ferramentas maduras
 
-### Negativas
+### Negativas ⚠️
 
 - Performance em CPU-bound
 - GIL em multithread
@@ -79,7 +79,7 @@ Frameworks e Bibliotecas:
 - Deployment mais complexo
 - Tipagem em runtime
 
-### Riscos
+### Riscos 🚨
 
 - Problemas de performance
   - Mitigação: Profiling, otimização
@@ -88,7 +88,7 @@ Frameworks e Bibliotecas:
 - Código não tipado
   - Mitigação: Mypy, type hints
 
-## Alternativas Consideradas
+## Alternativas Consideradas 🔄
 
 ### R
 - Prós: Foco em estatística
@@ -102,18 +102,18 @@ Frameworks e Bibliotecas:
 - Prós: JVM, tipagem forte
 - Contras: Complexidade, curva de aprendizado
 
-## Referências
+## Referências 📚
 
 - [Python Documentation](https://docs.python.org/)
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
-## Notas
+## Notas 📝
 
 - Criar guias de estilo Python
 - Estabelecer padrões ML/dados
 - Definir workflow de desenvolvimento
 - Documentar práticas de performance
 - Implementar CI/CD específico
-- Treinar equipe em Python moderno 
+- Treinar equipe em Python moderno

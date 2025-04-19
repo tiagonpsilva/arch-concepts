@@ -1,4 +1,4 @@
-# 003 - Migração para Arquitetura de Microsserviços
+# 003 - 🔌 🧩 Arquitetura de Microsserviços
 
 Data: 2024-03-21
 

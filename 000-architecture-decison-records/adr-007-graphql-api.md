@@ -1,4 +1,4 @@
-# 007 - Adoção de GraphQL para APIs Públicas
+# 007 - ⚡ 🔍 API GraphQL
 
 Data: 2024-03-21
 

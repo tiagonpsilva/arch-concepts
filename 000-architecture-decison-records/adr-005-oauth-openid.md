@@ -1,4 +1,4 @@
-# 005 - Implementação de OAuth 2.0 e OpenID Connect
+# 005 - 🔑 🔒 Autenticação com OAuth e OpenID Connect
 
 Data: 2024-03-21
 

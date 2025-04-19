@@ -1,12 +1,12 @@
-# 017 - Adoção de Go para Microsserviços
+# 017 - Adoção de Go para Microsserviços 🦫
 
 Data: 2024-03-21
 
-## Status
+## Status 📊
 
 Aceito
 
-## Contexto
+## Contexto 🔍
 
 Precisamos de uma linguagem que ofereça:
 - Alta performance
@@ -18,7 +18,7 @@ Precisamos de uma linguagem que ofereça:
 - Manutenibilidade
 - Curva de aprendizado razoável
 
-## Decisão
+## Decisão ✅
 
 Adotar Go como linguagem principal para microsserviços de alta performance:
 
@@ -56,9 +56,9 @@ Frameworks e Bibliotecas:
 - wire para DI
 - migrate para migrations
 
-## Consequências
+## Consequências 📈
 
-### Positivas
+### Positivas ✨
 
 - Performance excepcional
 - Baixo footprint de memória
@@ -69,7 +69,7 @@ Frameworks e Bibliotecas:
 - Documentação clara
 - Garbage collection eficiente
 
-### Negativas
+### Negativas ⚠️
 
 - Menos abstrações de alto nível
 - Repetição de código (sem generics)
@@ -77,7 +77,7 @@ Frameworks e Bibliotecas:
 - Necessidade de convenções claras
 - Curva inicial para devs OOP
 
-### Riscos
+### Riscos 🚨
 
 - Resistência da equipe
   - Mitigação: Treinamento e mentoria
@@ -86,7 +86,7 @@ Frameworks e Bibliotecas:
 - Complexidade em DDD
   - Mitigação: Padrões claros, exemplos
 
-## Alternativas Consideradas
+## Alternativas Consideradas 🔄
 
 ### Java/Spring
 - Prós: Ecossistema maduro, ferramentas
@@ -100,14 +100,14 @@ Frameworks e Bibliotecas:
 - Prós: Performance, segurança
 - Contras: Complexidade, curva de aprendizado
 
-## Referências
+## Referências 📚
 
 - [Go Documentation](https://golang.org/doc/)
 - [Effective Go](https://golang.org/doc/effective_go)
 - [Clean Architecture in Go](https://www.youtube.com/watch?v=MzTcsI6tn-0)
 - [Go Patterns](https://github.com/tmrts/go-patterns)
 
-## Notas
+## Notas 📝
 
 - Criar guias de estilo Go
 - Estabelecer padrões de projeto

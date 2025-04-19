@@ -1,4 +1,4 @@
-# 001 - Adoção do TypeScript no Frontend
+# 001 - 🔷 🎨 Adoção de TypeScript no Frontend
 
 Data: 2024-03-21
 

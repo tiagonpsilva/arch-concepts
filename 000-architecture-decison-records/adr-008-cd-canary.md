@@ -1,4 +1,4 @@
-# 008 - Implantação Contínua com Canary Releases
+# 008 - 🚀 🐤 Implantação Canary
 
 Data: 2024-03-21
 

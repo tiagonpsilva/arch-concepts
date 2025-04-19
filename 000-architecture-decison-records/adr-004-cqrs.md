@@ -1,4 +1,4 @@
-# 004 - Adoção do Padrão CQRS
+# 004 - 📝 📖 Implementação de CQRS
 
 Data: 2024-03-21
 

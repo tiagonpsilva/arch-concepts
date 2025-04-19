@@ -1,12 +1,12 @@
-# 011 - Adoção de DDD e Arquitetura Hexagonal
+# 011 - 🏗️ Adoção de DDD e Arquitetura Hexagonal
 
 Data: 2024-03-21
 
-## Status
+## ⚡ Status
 
 Aceito
 
-## Contexto
+## 🎯 Contexto
 
 Com a migração para microsserviços, precisamos de um padrão arquitetural que:
 - Facilite a modelagem de domínios complexos
@@ -17,7 +17,7 @@ Com a migração para microsserviços, precisamos de um padrão arquitetural que
 - Suporte diferentes tecnologias
 - Mantenha baixo acoplamento
 
-## Decisão
+## 🔨 Decisão
 
 Adotar Domain-Driven Design (DDD) com Arquitetura Hexagonal (Ports and Adapters) como padrões arquiteturais principais.
 
@@ -31,7 +31,7 @@ Justificativas:
 - Suporte natural a microsserviços
 - Manutenibilidade melhorada
 
-## Consequências
+## 📊 Consequências
 
 ### Positivas
 
@@ -61,7 +61,7 @@ Justificativas:
 - Inconsistência na implementação
   - Mitigação: Criar guias e templates claros
 
-## Alternativas Consideradas
+## 🔄 Alternativas Consideradas
 
 ### Arquitetura em Camadas Tradicional
 - Prós: Mais simples e familiar
@@ -75,14 +75,14 @@ Justificativas:
 - Prós: Bom para sistemas distribuídos
 - Contras: Complexidade em consistência, debugging difícil
 
-## Referências
+## 📚 Referências
 
 - [Domain-Driven Design](https://domainlanguage.com/ddd/)
 - [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/)
 - [Strategic DDD](https://www.domainlanguage.com/ddd/reference/)
 - [DDD and Microservices](https://www.infoq.com/articles/ddd-microservices/)
 
-## Notas
+## 📝 Notas
 
 - Criar guias de modelagem de domínio
 - Estabelecer padrões de implementação

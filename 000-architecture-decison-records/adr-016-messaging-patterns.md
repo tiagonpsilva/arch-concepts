@@ -1,4 +1,4 @@
-# 016 - Padrões de Mensageria
+# 016 - 📨 🔄 Padrões de Mensageria com RabbitMQ
 
 Data: 2024-03-21
 

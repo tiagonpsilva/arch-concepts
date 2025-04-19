@@ -1,4 +1,4 @@
-# 012 - Estratégia de Modelagem de Dados
+# 012 - 📊 💾 Estratégia de Modelagem de Dados
 
 Data: 2024-03-21
 

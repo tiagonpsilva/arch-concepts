@@ -1,41 +1,47 @@
-# [Número] - [Título da Decisão]
+# NNN - 📝 [Título da Decisão]
 
 Data: [YYYY-MM-DD]
 
-## Status
+## ⚡ Status
 
 [Proposto | Aceito | Depreciado | Substituído]
 
-## Contexto
+## 🎯 Contexto
 
-[Descreva o contexto e as forças em jogo, incluindo fatores técnicos, sociais, políticos e de projeto]
+[Descrição do contexto e problema que levou à decisão]
 
-## Decisão
+## 🔨 Decisão
 
-[Descreva a decisão tomada e justifique-a]
+[Descrição detalhada da decisão tomada]
 
-## Consequências
+## 📊 Consequências
 
 ### Positivas
 
-- [Liste os benefícios e resultados positivos da decisão]
+[Lista de consequências positivas]
 
 ### Negativas
 
-- [Liste os custos e impactos negativos da decisão]
+[Lista de consequências negativas]
 
 ### Riscos
 
-- [Liste os riscos identificados e possíveis mitigações]
+[Lista de riscos e suas mitigações]
 
-## Alternativas Consideradas
+## 🔄 Alternativas Consideradas
 
-[Liste as alternativas consideradas e por que não foram escolhidas]
+[Lista de alternativas consideradas e por que não foram escolhidas]
 
-## Referências
+## 📚 Referências
 
-- [Links para PRs, issues, documentação externa relevante]
+[Lista de referências relevantes]
 
-## Notas
+## 📝 Notas
 
-[Informações adicionais, observações importantes, etc] 
+[Notas adicionais e pontos de atenção]
+
+## 📊 Diagramas
+
+Os diagramas relacionados a esta decisão podem ser encontrados em:
+- [Diagrama 1](diagrams/adr-NNN-diagram1.wsd)
+- [Diagrama 2](diagrams/adr-NNN-diagram2.wsd) 

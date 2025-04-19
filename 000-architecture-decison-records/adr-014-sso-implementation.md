@@ -1,4 +1,4 @@
-# 014 - Implementação de Single Sign-On (SSO)
+# 014 - 🔐 🎫 Implementação de SSO
 
 Data: 2024-03-21
 

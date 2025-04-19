@@ -1,4 +1,4 @@
-# 010 - Adoção da AWS como Plataforma Cloud
+# 010 - ☁️ 🌐 Infraestrutura AWS
 
 Data: 2024-03-21
 

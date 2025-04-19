@@ -1,4 +1,4 @@
-# 002 - Uso do React Query para Gerenciamento de Estado
+# 002 - ⚛️ 🔄 Adoção do React Query
 
 Data: 2024-03-21
 

@@ -1,12 +1,12 @@
-# 019 - Adoção do Padrão 12-Factor App
+# 019 - Adoção do Padrão 12-Factor App 🏭
 
 Data: 2024-03-21
 
-## Status
+## Status 📊
 
 Aceito
 
-## Contexto
+## Contexto 🔍
 
 Com a arquitetura de microsserviços, precisamos:
 - Garantir consistência entre aplicações
@@ -17,7 +17,7 @@ Com a arquitetura de microsserviços, precisamos:
 - Minimizar divergências dev/prod
 - Manter observabilidade
 
-## Decisão
+## Decisão ✅
 
 Adotar os princípios do 12-Factor App como base para desenvolvimento:
 
@@ -93,9 +93,9 @@ Adotar os princípios do 12-Factor App como base para desenvolvimento:
 - Migrations automatizadas
 - Jobs agendados
 
-## Consequências
+## Consequências 📈
 
-### Positivas
+### Positivas ✨
 
 - Aplicações cloud-native
 - Facilidade de deploy
@@ -106,7 +106,7 @@ Adotar os princípios do 12-Factor App como base para desenvolvimento:
 - Portabilidade
 - Observabilidade
 
-### Negativas
+### Negativas ⚠️
 
 - Complexidade inicial
 - Overhead de infraestrutura
@@ -114,7 +114,7 @@ Adotar os princípios do 12-Factor App como base para desenvolvimento:
 - Curva de aprendizado
 - Custo de monitoramento
 
-### Riscos
+### Riscos 🚨
 
 - Complexidade acidental
   - Mitigação: Automação e templates
@@ -123,7 +123,7 @@ Adotar os princípios do 12-Factor App como base para desenvolvimento:
 - Resistência da equipe
   - Mitigação: Treinamento e documentação
 
-## Alternativas Consideradas
+## Alternativas Consideradas 🔄
 
 ### Arquitetura Tradicional
 - Prós: Mais simples, familiar
@@ -137,14 +137,14 @@ Adotar os princípios do 12-Factor App como base para desenvolvimento:
 - Prós: Menos complexidade, mais suporte
 - Contras: Menos flexível, mais caro
 
-## Referências
+## Referências 📚
 
 - [12 Factor App](https://12factor.net/)
 - [Beyond 12 Factor](https://www.cdta.org/sites/default/files/awards/beyond_the_12-factor_app_pivotal.pdf)
 - [Cloud Native Patterns](https://www.manning.com/books/cloud-native-patterns)
 - [Production-Ready Microservices](https://www.oreilly.com/library/view/production-ready-microservices/9781491965975/)
 
-## Notas
+## Notas 📝
 
 - Criar templates 12-factor
 - Estabelecer padrões por fator
